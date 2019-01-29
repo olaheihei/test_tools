@@ -4,9 +4,11 @@
 
 from flask import Flask, request,render_template,redirect,jsonify
 import json
-from code. import *
+from test_code import *
 
 app = Flask(__name__)
+a = Test_Tools_Api()
+
 
 
 
@@ -19,6 +21,9 @@ def index():
 def home():
 	return render_template('home.html')
 
+@app.route('/test')
+def test():
+	return a.list1()
 
 
 if __name__ == '__main__':
